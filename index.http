@@ -1,0 +1,11 @@
+###
+post  http://localhost:3009/
+
+Content-Type: application/json 
+
+{
+    "name":"bhagya",
+    "email":"lbhagya818@gmail.com",
+    "password":"bhagya2023",
+    "id":"1",
+}
