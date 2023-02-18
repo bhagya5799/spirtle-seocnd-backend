@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
-const AdminSuper = mongoose.Schema({
-    username: {
-        type: String,
+const AgentData = mongoose.Schema ({
+    limit: {
+        type: Number,
         required: true
     },
     email: {
@@ -18,5 +18,4 @@ const AdminSuper = mongoose.Schema({
         required: true
     },
 })
-
-module.exports = mongoose.model("adminSuper", AdminSuper)
+module.exports = mongoose.model("agentData", AgentData)

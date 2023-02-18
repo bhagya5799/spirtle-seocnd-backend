@@ -1,11 +1,111 @@
 ###
-post  http://localhost:3009/
-
+POST http://localhost:3009/add
 Content-Type: application/json 
 
 {
-    "name":"bhagya",
+    "username":"bhagya",
     "email":"lbhagya818@gmail.com",
     "password":"bhagya2023",
-    "id":"1",
+    "id":"1"
 }
+
+
+###
+post  http://localhost:3009/super-admin-login
+
+Content-Type: application/json 
+
+{"email":"lbhagya818@gmail.com",
+ "password":"bhagya2023"
+}
+
+
+
+###
+get http://localhost:3009/getAdminDetails
+
+
+
+### 
+POST http://localhost:3009/agent-data-create
+Content-Type: application/json 
+
+{"email":"agent10@gmail.com",
+ "password":"agent12",
+ "id":"2",
+ "limit":2
+}
+
+
+
+### 
+POST http://localhost:3009/agent-login
+Content-Type: application/json 
+
+{"email":"agent10@gmail.com",
+ "password":"agent12"
+}
+
+
+
+###
+delete http://localhost:3009/delete-agent/2
+
+
+###
+post http://localhost:3009/book-ticket
+Content-Type: application/json 
+
+{"name":"anil",
+ "age":40,
+ "seatNumber":7,
+ "id":"3",
+ "agentId":"1",
+ "gender":"MALE"
+}
+
+
+
+###
+get http://localhost:3009/getTicketDetails
+
+
+###
+get http://localhost:3009/get-booking-agent/1
+
+
+
+###
+post  http://localhost:3009/send-agent-details
+Content-Type: application/json
+
+{
+"name":"anil",
+"dateOfBirth":"01-11-1999",
+"phoneNumber":9000343434,
+"address":"bangalore",
+"profilePic":"http://pic.jpj",
+"id":"1"
+}
+
+
+
+###
+GET http://localhost:3009/get-oneAgent/1
+
+###
+delete http://localhost:3009/delete-a/1
+
+
+###
+put http://localhost:3009/addRow
+Content-Type: application/json
+
+{
+    "RowNumber":"5"
+}
+
+
+
+###
+Get http://localhost:3009/get-Row
