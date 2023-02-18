@@ -56,11 +56,11 @@ delete http://localhost:3009/delete-agent/2
 post http://localhost:3009/book-ticket
 Content-Type: application/json 
 
-{"name":"anil",
- "age":40,
- "seatNumber":7,
- "id":"3",
- "agentId":"1",
+{"name":"pachu",
+ "age":80,
+ "seatNumber":10,
+ "id":"4",
+ "agentId":"2",
  "gender":"MALE"
 }
 
@@ -98,11 +98,11 @@ delete http://localhost:3009/delete-a/1
 
 
 ###
-put http://localhost:3009/addRow
+PUT http://localhost:3009/addRow
 Content-Type: application/json
 
 {
-    "RowNumber":"5"
+    "rowNum":"5"
 }
 
 

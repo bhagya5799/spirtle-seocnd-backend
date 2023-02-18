@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const RowData = mongoose.Schema({
+const Row = mongoose.Schema({
     RowNumber: {
         type: Number,
         required: true
     }
 })
 
-module.exports = mongoose.model("rowData", RowData)
+module.exports = mongoose.model("row", Row)
 

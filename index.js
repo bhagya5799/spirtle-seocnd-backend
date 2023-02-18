@@ -6,7 +6,7 @@ const AdminSuper = require('./modelAdminSuper')
 const AgentData =require('./modelAgent')
 const TicketDetails=require('./modelTicket')
 const AgentDetails=require('./modelAgentDetails')
-const RowData=require('./modelRow')
+const Row=require('./modelRow')
 
 const app = express()
 app.use(cors())
@@ -200,6 +200,8 @@ app.get('/get-oneAgent/:id',async(request,response) => {
     }
 })
 
+
+// delete agent
 app.delete('/delete-a/:id', async (request, response) => {
     const { id } = request.params
     try {
@@ -212,11 +214,11 @@ app.delete('/delete-a/:id', async (request, response) => {
 
 })
 
-
+// update row number
 app.put('/addRow', async (request, response) => {
     const { RowNumber } = request.body
     try {
-        await RowData.updateOne({ RowNumber: RowNumber })
+        await Row.updateOne({ RowNumber: RowNumber })
         response.send({ status: true, msg: "row Successfully added" })
     }
     catch (err) {
@@ -226,14 +228,14 @@ app.put('/addRow', async (request, response) => {
 
 app.get('/get-Row', async (request, response) => {
     try {
-        const rowData = await RowData.find()
+        const rowData = await Row.find()
         let rowNum = null
         console.log(rowData)
-        // rowData.map(eachRow => {
-        //     if (eachRow.RowNumber) {
-        //         rowNum = eachRow.RowNumber
-        //     }
-        // })
+        rowData.map(eachRow => {
+            if (eachRow.RowNumber) {
+                rowNum = eachRow.RowNumber
+            }
+        })
         response.send({ status: true, rowNum: rowNum })
     }
     catch (err) {
