@@ -10,7 +10,6 @@ const Row=require('./modelRow')
 
 const app = express()
 app.use(cors())
-
 app.use(express.json());
 const mongooseData = mongoose.connect('mongodb+srv://bhagyashree:bhagya5799@cluster0.q2xpdj1.mongodb.net/?retryWrites=true&w=majority').then(
     () => console.log('db connected.....')
